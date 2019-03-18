@@ -11,15 +11,15 @@ client = commands.Bot(command_prefix = "!")
 
 @client.event
 async def on_ready():
-	print("The Bot is online and connected")
-	await client.change_presence(game=discord.Game(name="Tahap Pengembang"))
+    print("The Bot is online and connected")
+    await client.change_presence(game=discord.Game(name="Tahap Pengembang"))
 		
 
 @client.event
 async def on_message(message):
 	if message.content.upper().startswith('!PING'):
-		userID = message.author.id
-		await client.send_message(message.channel, "<@%s> !Pong" % (userID))
+	    userID = message.author.id
+	    await client.send_message(message.channel, "<@%s> !Pong" % (userID))
 
 	if message.content.upper().startswith('!MEMEK'):
 	    userID = message.author.id
@@ -32,7 +32,7 @@ async def on_message(message):
 	    await client.send_message(message.channel, "You do not have Permission")
 
 	if message.content.upper().startswith('!AMIADMIN'):
-	    if "557144615908540417" in [role.id for role in message.author.roles]:
+	    if "id role lu" in [role.id for role in message.author.roles]:
 		await client.send_message(message.channel, "You are an admin")
 	    else:
 		await client.send_message(message.channel, "You are not an admin")
