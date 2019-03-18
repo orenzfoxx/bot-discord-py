@@ -1,2 +1,2 @@
 # bot-discord-py
-use python 3.6.4 - 3.6.6
+use python 3.5.0 - 3.6.6
