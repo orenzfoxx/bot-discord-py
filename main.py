@@ -1,4 +1,4 @@
-#mantappp jiwaaa 
+#mantappp jiwaaa pake python versi 3.5 - 3.6
 
 import discord
 from discord.ext.commands import Bot
@@ -22,21 +22,20 @@ async def on_message(message):
 		await client.send_message(message.channel, "<@%s> !Pong" % (userID))
 
 	if message.content.upper().startswith('!MEMEK'):
-		userID = message.author.id
-		await client.send_message(message.channel, "<@%s> !enak euy:v" % (userID))
+	    userID = message.author.id
+	    await client.send_message(message.channel, "<@%s> !enak euy:v" % (userID))
 
 	if message.content.upper().startswith('!SAY'):
-		if message.author.id == "557144615908540417":
-			args = message.content.split(" ")
-			await client.send_message(message_channel, "%s" % (" ".join(args[1:])))
-		else:
-			await client.send_message(message.channel, "You do not have Permission")
+	    args = message.content.split(" ")
+	    await client.send_message(message_channel, "%s" % (" ".join(args[1:])))
+	else:
+	    await client.send_message(message.channel, "You do not have Permission")
 
 	if message.content.upper().startswith('!AMIADMIN'):
-		if "557144615908540417" in [role.id for role in message.author.roles]:
-			await client.send_message(message.channel, "You are an admin")
-		else:
-			await client.send_message(message.channel, "You are not an admin")
+	    if "557144615908540417" in [role.id for role in message.author.roles]:
+		await client.send_message(message.channel, "You are an admin")
+	    else:
+		await client.send_message(message.channel, "You are not an admin")
 
 
 client.run("tarok token lo disini")
